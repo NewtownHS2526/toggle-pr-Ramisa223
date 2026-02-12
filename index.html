@@ -4,11 +4,18 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
     <div id="page" class="container">
       <nav class="navbar pt-5" role="navigation" aria-label="main navigation">
+        <div class="navbar-start">
+          <div class="navbar-item">
+            <p class="title">Inbox</p>
+          </div>
+        </div>
         <div class="navbar-brand">
           <div class="button">Dark Mode</div>
         </div>
@@ -17,17 +24,23 @@
       <section class="hero">
         <div class="hero-body">
           <p id="heading" class="title has-text-centered">Your Inbox</p>
+          <p id="subheading" class="subtitle has-text-centered">You have 2 unread messages</p>
           <p id="subheading" class="subtitle has-text-centered">Today is September 1st</p>
         </div>
       </section>
 
       <div id="action-buttons" class="hidden">
         <button class="button">Delete Message(s)</button>
+        <button class="button">Reply to Message(s)</button>
         <button class="button">Mark as Read</button>
       </div>
 
       <section id="inbox" class="hero mt-5">
         <div class="hero-body mx-5 py-2 is-flex is-justify-content-space-between is-align-items-center">
+          <div id="checkbox" class="mr-5">
+            <label class="checkbox">
+              <input type="checkbox">
+            </label>      
           <div id="inbox-heading" class="is-flex is-align-items-center">
             <div id="checkbox" class="mr-5">
               <label class="checkbox">
@@ -39,6 +52,7 @@
                 Michael Messenger
               </p>
               <p class="subtitle px-4">
+                <p class="subtitle px-4">
                 Tomorrow's Event Details
               </p>
             </div>
@@ -46,6 +60,7 @@
           <div id="inbox-buttons">
             <button id="open-button" class="button">Open</button>
             <button id="reply-button" class="button">Reply</button>
+            <botton id="mark-button" class="button">Mark as Read</button> 
             <button id="mark-button" class="button hidden">Mark as Unread</button>
           </div>
         </div>
@@ -56,6 +71,7 @@
                 Here's the plan for the event tomorrow. Let me know if you have any questions.
                 <ol>
                   <li>06:00 pm - Doors Open</li>
+                  <li>06:30 pm - Welcome Speech</li>
                   <li>07:00 pm - Music Starts</li>
                   <li>08:00 pm - Awards</li>
                   <li>08:30 pm - After Party</li>
@@ -70,6 +86,7 @@
         </section>
         <section id="reply-message" class="section hidden">
           <div id="reply-buttons" class="mb-2">
+            <button id="reply-send-button" class="button">Send Reply</button>
             <button id="send-button" class="button">Send Message</button>
             <button id="cancel-button" class="button">Cancel</button>
           </div>
@@ -80,6 +97,10 @@
 
       <section id="inbox" class="hero mt-1 is-read">
         <div class="hero-body mx-5 py-2 is-flex is-justify-content-space-between is-align-items-center">
+          <div id="checkbox" class="mr-5">
+            <label class="checkbox">
+              <input type="checkbox">
+            </label>
           <div id="inbox-heading" class="is-flex is-align-items-center">
             <div id="checkbox" class="mr-5">
               <label class="checkbox">
@@ -98,6 +119,7 @@
           <div id="inbox-buttons">
             <button id="open-button" class="button" disabled>Open</button>
             <button id="reply-button" class="button" disabled>Reply</button>
+            <botton id="mark-button" class="button" disabled>Mark as Read</button>
             <button id="mark-button" class="button" disabled>Mark as Unread</button>
           </div>
         </div>

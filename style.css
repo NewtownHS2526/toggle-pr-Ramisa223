@@ -4,11 +4,13 @@ body {
 }
 .navbar{
   background-color: #eeeeee;
+  height: 60px;
 }
 
 #heading:hover{
   text-shadow: 2px 2px lightgrey;
   cursor: pointer;
+  background-color: #eeeeee;
   user-select: none;
 }
 
